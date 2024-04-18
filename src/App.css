@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --dark: #4aa3a3;
+  --light: #c0d8d8;
+  --background: #87b5b5;
+  --default-border: 1px solid black;
+  --shadow: 1px 1px 10px 2px black;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.toolbar {
+  background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolbar-left img {
+  width: 25px;
+}
+
+.toolbar .fa-solid:hover {
+  cursor: pointer;
+  color: #6ad3d3;
+  transition: all 0.2s ease-in-out;
+}
+
+.editorWrapper {
+  width: 80vw;
+  max-width: 600px;
+  margin: 1.125rem auto;
+  border: var(--default-border);
+  box-shadow: var(--shadow);
+}
+
+.editorWrapper textarea {
+  background-color: var(--light);
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+}
+
+.previewerWrapper {
+  width: 950vw;
+  max-width: 800px;
+  margin: 1.125rem auto;
+  border: var(--default-border);
+  box-shadow: var(--shadow);
+  overflow-wrap: break-word;
+}
+
+.previewerWrapper .converted {
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.maximized {
+  min-height: 100vh;
+  margin: auto;
+}
+
+.maximized textarea {
+  min-height: 95vh;
+}
+
+.hide {
+  display: none;
+}
+
+#preview {
+  padding: 0 1rem;
+  line-height: 2rem;
+}
+
+
+blockquote {
+  border-left: 3px solid #224b4b;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+p>code {
+  padding: 3px;
+}
+
+code {
+  background: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+pre {
+  display: block;
+  overflow: auto;
+  background: white;
+  padding: 5px;
+  line-height: 1.2;
+}
+
+h1 {
+  border-bottom: 2px solid var(--dark);
+}
+
+h2 {
+  border-bottom: 1px solid var(--dark);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 2px solid var(--dark);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#preview img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+}
